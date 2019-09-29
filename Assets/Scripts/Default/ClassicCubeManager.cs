@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
 
 namespace Classic { 
@@ -15,7 +14,6 @@ namespace Classic {
         public GameObject cubePrefab;
         #endregion
 
-        // Use this for initialization
         void Start()
         {
             SpawnCubes();
@@ -31,17 +29,12 @@ namespace Classic {
                 while (position.y < height) {
                     var newCube = GameObject.Instantiate(cubePrefab);
                     newCube.transform.position = position;
-                    newCube.GetComponent<Rotator>().speed = UnityEngine.Random.Range(25.0f, 50.0f);
+                    newCube.GetComponent<Rotator>().rotationSpeed = UnityEngine.Random.Range(25.0f, 50.0f);
                     position = new Vector3(position.x, position.y + cubeSpacing, 0f);
                 }
                 position = new Vector3(position.x + cubeSpacing, 0f, 0f);
             }
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

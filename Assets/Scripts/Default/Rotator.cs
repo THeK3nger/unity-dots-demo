@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Classic
 {
 	public class Rotator : MonoBehaviour
 	{
 
-		public float speed;
+		public float rotationSpeed;
 
-		// Update is called once per frame
 		void Update()
 		{
-			transform.Rotate(0f, speed * Time.deltaTime, 0f);
+			transform.Rotate(0f, rotationSpeed * Time.deltaTime, 0f);
 		}
 	}
 }
