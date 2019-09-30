@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Unity.Collections;
-using UnityEngine.Jobs;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;

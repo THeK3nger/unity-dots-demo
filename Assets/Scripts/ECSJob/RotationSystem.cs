@@ -22,10 +22,7 @@ namespace ECSJob
 
             public void Execute(ref Rotation rotation, [ReadOnly] ref RotationSpeed rotationSpeed)
             {
-                //Debug.Log("Prima " + quaternion. rotation.Value .ToString());
-                //Debug.Log("Speed " + rotationSpeed.Value);
                 rotation.Value = math.mul(math.normalize(rotation.Value), quaternion.AxisAngle(math.up(), rotationSpeed.Value * deltaTime));
-                //Debug.Log("Dopo " + rotation.Value.ToString());
             }
         }
 

@@ -19,7 +19,6 @@ namespace JobSystem
         #endregion
 
         TransformAccessArray transformAccessArray;
-        RotatorJob rotatorJob;
         Unity.Jobs.JobHandle jobHandle;
         NativeList<float> speeds;
 
@@ -65,7 +64,7 @@ namespace JobSystem
 
             if (jobHandle.IsCompleted)
             {
-                rotatorJob = new RotatorJob()
+                var rotatorJob = new RotatorJob()
                 {
                     deltaTime = Time.deltaTime,
                     speeds = speeds
